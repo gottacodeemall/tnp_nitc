@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% load static %}   
+{% block sact %} active {% endblock %}
+{% block body %}
+
+      
+      <section class="probootstrap-section probootstrap-section-colored"  style="background-image: url({% static 'img/slider_2.jpg' %}) !important">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate" style="margin-bottom:40px;"   >
+              <h2>Student Guidelines</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="probootstrap-flex-block">
+                <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
+                  <ul>
+                    <li> rule1</li>
+                    <li> rule2</li>
+                 </ul>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+{% endblock %}

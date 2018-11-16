@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% load static %}   
+{% block ract %} active {% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'css/style.css' %}"> <!-- Resource style -->{% endblock %}
+{% block body %}
+
+      
+      <section class="probootstrap-section probootstrap-section-colored"  style="background-image: url({% static 'img/slider_2.jpg' %}) !important">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate">
+              <h2>Procedure</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+            <section class="probootstrap-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="probootstrap-flex-block">
+                <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
+                  <h3>Message</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cd-timeline js-cd-timeline">
+		<div class="cd-timeline__container">
+        			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Step 1</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--movie js-cd-img">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Step 2</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+			<div class="cd-timeline__block js-cd-block">
+				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+				</div> <!-- cd-timeline__img -->
+
+				<div class="cd-timeline__content js-cd-content">
+					<h2>Step 3</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
+					<a href="#0" class="cd-timeline__read-more">Read more</a>
+				</div> <!-- cd-timeline__content -->
+			</div> <!-- cd-timeline__block -->
+
+		
+		</div>
+	</section> <!-- cd-timeline -->
+
+{% endblock %}
+{% block javascript %}
+<script src="{% static 'js/main_vert.js' %}"></script>
+{% endblock %}
