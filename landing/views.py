@@ -17,9 +17,6 @@ def gallery(request):
 def achievements(request):
     return render(request, 'achievements.html')
 
-def recruiters(request):
-    return render(request, 'recruiters.html')
-
 def people(request):
     return render(request, 'people.html')
 
@@ -28,6 +25,15 @@ def students(request):
 
 def pastplacements(request):
     return render(request, 'pastplacements.html')
+
+def pastrecruiters(request):
+    return render(request, 'pastrecruiters.html')
+
+def whyus(request):
+    return render(request, 'whyus.html')
+
+def pandp(request):
+    return render(request, 'pandp.html')
 
 def contactus(request):
     return render(request, 'contactus.html')

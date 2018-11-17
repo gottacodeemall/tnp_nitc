@@ -31,7 +31,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" title="NITC">NIT Calicut</a>
+            <a class="navbar-brand" href="/" title="NITC">NIT Calicut</a>
           </div>
 
           <div id="navbar-collapse" class="navbar-collapse collapse">
@@ -44,11 +44,19 @@
                   <li><a href="academics">Academics</a></li>
                   <li><a href="achievements">Achievements</a></li>
                   <li><a href="gallery">Gallery</a></li>
-                  <li><a href="pastplacements">Past Placements</a></li>
                 </ul>
               </li>
               <li class="{% block sact %} {% endblock %}"><a href="students">Students</a></li>
-              <li class="{% block ract %} {% endblock %}"><a href="recruiters">Recruiters</a></li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Recruiters</a>
+                <ul class="dropdown-menu">
+                  <li><a href="whyus">Why Us?</a></li>
+                  <li ><a href="recruiters">Past Recruiters</a></li>
+                  <li><a href="pastplacements">Statistics</a></li>
+                  <li><a href="pandp">Procedure and Policies</a></li>
+                </ul>
+              </li>
+              
               <li class="{% block pact %} {% endblock %}"><a href="people">People</a></li>
               
             </ul>
