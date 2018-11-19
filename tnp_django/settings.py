@@ -39,6 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landing.apps.LandingConfig',
+    'aboutus.apps.AboutusConfig',
+    'students.apps.StudentsConfig',
+    'recruiters.apps.RecruitersConfig',
+    'contactus.apps.ContactusConfig',
 ]
 
 MIDDLEWARE = [

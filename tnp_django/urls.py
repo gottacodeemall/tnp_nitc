@@ -21,6 +21,10 @@ from django.urls import include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('landing.urls')),
+    path('', include('aboutus.urls')),
+    path('', include('students.urls')),
+    path('', include('recruiters.urls')),
+    path('', include('contactus.urls')),
 ]
 
 from django.conf import settings
