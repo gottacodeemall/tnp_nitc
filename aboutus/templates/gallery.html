@@ -20,41 +20,15 @@
               <div class="grid-sizer"></div>
               <div class="gutter-sizer"></div>
               <div class="probootstrap-gallery">
+              {% for item in gal%}
                 <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="grid-item probootstrap-animate">
-                  <a href="{% static 'img/slider_4.jpg' %}" itemprop="contentUrl" data-size="1000x632">
-                    <img src="{% static 'img/slider_4.jpg' %}" itemprop="thumbnail" alt="Free Bootstrap Template by uicookies.com" />
+                  <a href="{{ item.pic.url }}  " itemprop="contentUrl" data-size="1000x632">
+                    <img src="{{ item.pic.url }}" itemprop="thumbnail" alt="{{ item.alt_text }}" />
                   </a>
-                  <figcaption itemprop="caption description">Image caption here</figcaption>
+                  <figcaption itemprop="caption description">{{ item.info }}</figcaption>
                 </figure>
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="grid-item probootstrap-animate">
-                  <a href="{% static 'img/slider_4.jpg' %}" itemprop="contentUrl" data-size="1000x632">
-                    <img src="{% static 'img/slider_4.jpg' %}" itemprop="thumbnail" alt="Free Bootstrap Template by uicookies.com" />
-                  </a>
-                  <figcaption itemprop="caption description">Image caption here</figcaption>
-                </figure>
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="grid-item probootstrap-animate">
-                  <a href="{% static 'img/slider_4.jpg' %}" itemprop="contentUrl" data-size="1000x632">
-                    <img src="{% static 'img/slider_4.jpg' %}" itemprop="thumbnail" alt="Free Bootstrap Template by uicookies.com" />
-                  </a>
-                  <figcaption itemprop="caption description">Image caption here</figcaption>
-                </figure>
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="grid-item probootstrap-animate">
-                  <a href="{% static 'img/slider_4.jpg' %}" itemprop="contentUrl" data-size="1000x632">
-                    <img src="{% static 'img/slider_4.jpg' %}" itemprop="thumbnail" alt="Free Bootstrap Template by uicookies.com" />
-                  </a>
-                  <figcaption itemprop="caption description">Image caption here</figcaption>
-                </figure>
-                <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="grid-item probootstrap-animate">
-                  <a href="{% static 'img/slider_4.jpg' %}" itemprop="contentUrl" data-size="1000x632">
-                    <img src="{% static 'img/slider_4.jpg' %}" itemprop="thumbnail" alt="Free Bootstrap Template by uicookies.com" />
-                  </a>
-                  <figcaption itemprop="caption description">Image caption here</figcaption>
-                </figure>
-                
-
-              
+              {% endfor %}
               </div>
-
             </div>
           </div>
         </div>

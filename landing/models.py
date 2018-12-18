@@ -1,23 +1,11 @@
 from django.db import models
 
 # Create your models here.
-
-class FooterQuicklink(models.Model):
-    linkname=models.CharField(max_length=255, blank=False, null=True,unique=True,help_text="Name of the link: Eg. NITC.")
-    url=models.URLField(blank=False,null=False,help_text="Name of the link: Eg. https://nitc.ac.in")
-    def __str__(self) -> str:
-        return '{0}'.format(self.linkname)
-
-class FooterContactInformation(models.Model):
-    classname=models.CharField(max_length=255, blank=False, null=True,help_text="Icons are provided by Icomoon and can be controlled by a class name.")
-    info=models.CharField(max_length=255, blank=False, null=True,unique=True,help_text="information")
-    def __str__(self) -> str:
-        return '{0}'.format(self.info)
-
 class WelcomeMessage(models.Model):
+    name=models.CharField(max_length=255, blank=False, null=True,help_text="Maintain a single copy. Edit, do not create additionals.")
     welcomemessage=models.TextField(blank=False,null=False,help_text="Enter the html content of the welcome message.")
     def __str__(self) -> str:
-        return '{0}'.format(self.welcomemessage)
+        return '{0}'.format(self.name)
 
 class Slide(models.Model):
     number = models.PositiveIntegerField(unique=True,blank=False,null=False,help_text="slides are sorted based on this.")

@@ -1,7 +1,12 @@
 from django.db import models
 
 # Create your models here.
-        
+class ContactUs(models.Model):
+    name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the person.")
+    info=models.TextField(blank=False,unique=True,help_text="html content")
+    def __str__(self) -> str:
+        return '{0}'.format(self.name)
+
 class People(models.Model):
     name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the person.")
     pic = models.ImageField(upload_to = 'static/img/people/', default = 'static/img/slider_3.jpg')
@@ -9,14 +14,15 @@ class People(models.Model):
     phone=models.CharField(max_length=255, blank=False,help_text="Character field")
     email=models.CharField(max_length=255, blank=False)
     CHOICE= (
-        ('faculty', 'Faculty'),
-        ('core', 'Core Committee'),
-        ('rep', 'Placement Rep'),
+        ('Faculty', 'Faculty'),
+        ('Core Committee', 'Core Committee'),
+        ('Placement Representative', 'Placement Rep'),
     )
     display_in_contactus=models.BooleanField(blank=False,null=False)
     role= models.CharField(max_length=255,choices=CHOICE)
     def __str__(self) -> str:
         return '{0}'.format(self.name)
+
 
 
 
