@@ -16,126 +16,110 @@
     <div class="row">
         <div class=" col-md-12">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        B.Tech
-                        </a>
-                        </h4>
-                    </div>
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
-                                    Computer Science and Engineering
-                                    </a>
-                                    </h4>
+                {% if bc != 0 %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            B.Tech
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                    {% for item in btech %}
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne{{ forloop.counter0 }}" aria-expanded="true" aria-controls="collapseOne{{ forloop.counter0 }}">
+                                                {{ item.branch }}
+                                                </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne{{ forloop.counter0 }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    {{ item.subjects | safe}}
+                                                    <a class="btn btn-primary" role="button" ref="{{ item.url }}" target="_blank">Link to curriculum</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
-                                <div id="collapseOne2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                        <ul><li>Compilers</li><li>Compilers</li><li>Compilers</li></ul>
-                                        <a class="btn btn-primary" role="button" ref="{{ bcse }}" target="_blank">Link to curriculum</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne1" aria-expanded="true" aria-controls="collapseOne1">
-                                    EEE
-                                    </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu. <a href="http://bootstraptema.ru/stuff/snippets_bootstrap/elements/stilnyj_bootstrap_accordion/33-1-0-1885" target="_blank">BootstrapTema</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
-                                    ECE
-                                    </a>
-                                    </h4>
-                                </div>
-                                <div id="collapseOne3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu. <a href="http://bootstraptema.ru/stuff/snippets_bootstrap/elements/stilnyj_bootstrap_accordion/33-1-0-1885" target="_blank">BootstrapTema</a>
-                                    </div>
-                                </div>
-                            </div>
+                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
-                        M.Tech
-                        </a>
-                        </h4>
-                    </div>
-                    <div id="collapse2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                        <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse21" aria-expanded="true" aria-controls="collapse21">
-                                    Computer Science and Engineering
-                                    </a>
-                                    </h4>
+                {% endif %}
+            {% if mc != 0 %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            M.Tech
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <div class="panel-group" id="accordion3" role="tablist" aria-multiselectable="true">
+                                    {% for item in mtech %}
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion3" href="#collapseTwo{{ forloop.counter0 }}" aria-expanded="true" aria-controls="collapseTwo{{ forloop.counter0 }}">
+                                                {{ item.branch }}
+                                                </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo{{ forloop.counter0 }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    {{ item.subjects | safe}}
+                                                    <a class="btn btn-primary" role="button" ref="{{ item.url }}" target="_blank">Link to curriculum</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
                                 </div>
-                                <div id="collapse21" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu. <a href="http://bootstraptema.ru/stuff/snippets_bootstrap/elements/stilnyj_bootstrap_accordion/33-1-0-1885" target="_blank">BootstrapTema</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse22" aria-expanded="true" aria-controls="collapse22">
-                                    EEE
-                                    </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse22" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu. <a href="http://bootstraptema.ru/stuff/snippets_bootstrap/elements/stilnyj_bootstrap_accordion/33-1-0-1885" target="_blank">BootstrapTema</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="panel panel-default">
-                                <div class="panel-heading" role="tab" id="headingOne">
-                                    <h4 class="panel-title">
-                                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapse23" aria-expanded="true" aria-controls="collapse23">
-                                    ECE
-                                    </a>
-                                    </h4>
-                                </div>
-                                <div id="collapse23" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                    <div class="panel-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lacinia lacinia mauris, at ultricies leo ornare nec. Vivamus eu est vel felis dignissim tempor. Nulla facilisi. Duis molestie tortor ac tempor volutpat. Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero. Vestibulum sollicitudin sapien libero, egestas tempus eros scelerisque eu. <a href="http://bootstraptema.ru/stuff/snippets_bootstrap/elements/stilnyj_bootstrap_accordion/33-1-0-1885" target="_blank">BootstrapTema</a>
-                                    </div>
-                                </div>
-                            </div>
+                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                {% endif %}
 
-                </div>
+            {% if mcc != 0 %}
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            MCA
+                            </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <div class="panel-group" id="accordion4" role="tablist" aria-multiselectable="true">
+                                    {% for item in mca %}
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                <a role="button" data-toggle="collapse" data-parent="#accordion4" href="#collapseThree{{ forloop.counter0 }}" aria-expanded="true" aria-controls="collapseThree{{ forloop.counter0 }}">
+                                                {{ item.branch }}
+                                                </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree{{ forloop.counter0 }}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    {{ item.subjects | safe}}
+                                                    <a class="btn btn-primary" role="button" ref="{{ item.url }}" target="_blank">Link to curriculum</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                {% endif %}
+
             </div><!-- /.panel-group -->
 
         </div><!-- /.col-md-offset-3 col-md-6 -->

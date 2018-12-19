@@ -1,8 +1,23 @@
 from django.db import models
 
-class CurLink(models.Model):
-    branch=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the Branch. Eg. b-CSE for Btech CSE, m-CSE for Mtech")
+class AboutUs(models.Model):
+    name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the achievement. Do not create multiple instances.")
+    aboutus = models.TextField(blank=False, null=False, help_text="About Us")
+    vision=models.TextField(blank=False,null=False,help_text="Vision")
+    mission=models.TextField(blank=False,null=False,help_text="Mission")
+    def __str__(self) -> str:
+        return '{0}'.format(self.branch)
+
+class Branch(models.Model):
+    branch=models.CharField(max_length=255, blank=False,unique=False,help_text="Name of the Branch. Eg. Computer Science and Engineering")
+    subjects=models.TextField(blank=False,null=False,help_text="HTML list of core and important subjects")
     url=models.URLField()
+    CHOICE = (
+        ('B.Tech', 'B.Tech'),
+        ('M.Tech', 'M.Tech'),
+        ('MCA', 'MCA'),
+    )
+    stream=models.CharField(max_length=255,choices=CHOICE)
     def __str__(self) -> str:
         return '{0}'.format(self.branch)
 

@@ -8,7 +8,7 @@ class StudentInstruction(models.Model):
         return '{0}'.format(self.name)
 
 class FileUpload(models.Model):
-    document = models.FileField(upload_to='static/files/')
+    document = models.FileField(upload_to='static/files/students/')
     file_name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name")
     def __str__(self) -> str:
         return '{0}'.format(self.file_name)
