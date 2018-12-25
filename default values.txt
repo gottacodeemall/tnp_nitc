@@ -1,0 +1,285 @@
+Landing
+________________________________________________________________________________________
+
+Welcome Message
+-----------------------------------------
+Singleton
+
+<h3>Welcome Message</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+
+fromthe tpo
+-----------------------------------------
+Singleton
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!
+
+Select Image
+
+Vinod Pathari
+
+Slide
+----------------------------------------
+1
+
+Best in the world
+
+\tnp_nitc\static\img\slider1
+++++++++++++++++++++++++++++
+2
+
+Best in the universe
+
+\tnp_nitc\static\img\slider2
+
+Landing_Stats
+--------------
+
+icon-users2
+
+843
+
+2000
+
+Students Eligible
+++++++++++++++++++
+icon-user-tie
+
+40 
+
+2000
+
+Highest Package
+++++++++++++++++++
+icon-library
+
+9
+
+2000
+
+Average Package
+++++++++++++++++++
+icon-smile2
+
+83
+
+2000
+
+Placement Percentage
+
+%
++++++++++++++++++++
+
+
+About us
+_______________________________________________________________________________________________
+
+aboutus
+--------------------------
+
+Singleton
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+
+
+achievements
+--------------------------
+
+Google Scholar
+
+CLICK
+
+Google Scholar
+
+Title
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!
+
+CLICK
+
+gallery
+---------------------------
+Google Scholar
+
+CLICK
+
+Google Scholar
+
+Title
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!
+
+CLICK
+
+academics
+---------------------------
+Computer Science and Engineering
+
+<ul>
+<li>
+Compilers
+</li>
+</ul>
+
+https://www.youtube.com/watch?v=2UjJGNA4BL0
+
+B.Tech
+
+++++++++++++++++++
+Computer Science and Engineering
+
+<ul>
+<li>
+Compilers
+</li>
+</ul>
+
+https://www.youtube.com/watch?v=2UjJGNA4BL0
+
+M.Tech
+
+
+Students
+__________________________________________________________________________________
+
+student instruction
+-----------------------------
+Singleton
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+File Uploads
+----------------------------
+select
+
+Filename
+
+Recruiters
+___________________________________________________________________________________
+
+Why us
+-------------------------------
+Singleton
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+
+Visited Companies (Past Recruiters)
+------------------------------
+Microsoft
++++++++++++++
+Goldman Sachs
+
+
+Stats tables
+------------------------------
+Placement Stats 2018
+
+<table style="width:100%">
+  <tr>
+    <th>Branch</th>
+    <th>Avg Package</th>
+    <th>Highest Package</th>
+  </tr>
+  <tr>
+    <td>CSE</td>
+    <td>12.5</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>ESE</td>
+    <td>8</td>
+    <td>22.5</td>
+  </tr>
+</table>
+
++++++++++++++++++++++++++++++++++
+
+Placement Stats 2017
+
+<table style="width:100%">
+  <tr>
+    <th>Branch</th>
+    <th>Avg Package</th>
+    <th>Highest Package</th>
+  </tr>
+  <tr>
+    <td>CSE</td>
+    <td>12.5</td>
+    <td>40</td>
+  </tr>
+  <tr>
+    <td>ESE</td>
+    <td>8</td>
+    <td>22.5</td>
+  </tr>
+</table>
+
+ChartData
+----------------------------------------------
+bar
+
+avg.package
+
+[2012,2013,2014,2015,2016,2017]
+
+[12, 19, 3, 5, 2, 3]
+
+++++++++++++++++++++++++++++++++++++
+
+pie
+
+avg.package
+
+[2012,2013,2014,2015,2016,2017]
+
+[12, 19, 3, 5, 2, 3]
+
+
+Policy
+------------------------------------------------
+Singleton
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+Procedure Steps
+------------------------------------------------
+1
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+++++++++++++++++++++++++++++
+
+2
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+
+Contact US
+________________________________________________________________________________________
+
+Reach us
+-----------------------------------------------
+Singleton
+
+<h3 style="font-weight:300"> Airways</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+<h3 style="font-weight:300"> Railways</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+<h3 style="font-weight:300"> Roadways</h3>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+
+
+Contact us
+----------------------------------------------
+Singleton
+
+<p> Lorem ipsum </p>
+
+People
+----------------------------------------------

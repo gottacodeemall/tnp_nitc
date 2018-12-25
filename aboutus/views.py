@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Branch,Gallery,Achievement,AboutUs
+from .models import Academic,Gallery,Achievement,AboutUs
 # Create your views here.
 def aboutus(request):
     try:
@@ -11,9 +11,9 @@ def aboutus(request):
 
 def academics(request):
     try:
-        btech=Branch.objects.filter(stream="B.Tech")
-        mtech=Branch.objects.filter(stream="M.Tech")
-        mca=Branch.objects.filter(stream="MCA")
+        btech=Academic.objects.filter(stream="B.Tech")
+        mtech=Academic.objects.filter(stream="M.Tech")
+        mca=Academic.objects.filter(stream="MCA")
         bc=btech.count()
         mc=mtech.count()
         mcc=mca.count()

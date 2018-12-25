@@ -1,14 +1,14 @@
 from django.db import models
 
 class AboutUs(models.Model):
-    name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the achievement. Do not create multiple instances.")
-    aboutus = models.TextField(blank=False, null=False, help_text="About Us")
-    vision=models.TextField(blank=False,null=False,help_text="Vision")
-    mission=models.TextField(blank=False,null=False,help_text="Mission")
+    name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the ABOUTUS ON Djanoo-admin. Do not create multiple instances.")
+    aboutus = models.TextField(blank=False, null=False, help_text="HTML of About Us")
+    vision=models.TextField(blank=False,null=False,help_text="HTML of Vision")
+    mission=models.TextField(blank=False,null=False,help_text="HTML of Mission")
     def __str__(self) -> str:
-        return '{0}'.format(self.branch)
+        return '{0}'.format(self.name)
 
-class Branch(models.Model):
+class Academic(models.Model):
     branch=models.CharField(max_length=255, blank=False,unique=False,help_text="Name of the Branch. Eg. Computer Science and Engineering")
     subjects=models.TextField(blank=False,null=False,help_text="HTML list of core and important subjects")
     url=models.URLField()

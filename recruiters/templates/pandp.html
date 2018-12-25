@@ -20,7 +20,7 @@
             <div class="col-md-12">
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
-                    {{ policy.policy | safe }}
+                    {{ policy.content | safe }}
                 </div>
               </div>
             </div>
@@ -28,7 +28,7 @@
         </div>
       </section>
 
-
+{% if filecount != 0 %}
     <section class="probootstrap-section" style="margin-top:100px;">
         <div class="container">
           <div class="row">
@@ -44,6 +44,7 @@
           </div>
         </div>
       </section>
+    {%  endif %}
 
       <section class="cd-timeline js-cd-timeline">
 		<div class="cd-timeline__container">

@@ -20,6 +20,7 @@
                 <div class="col-md-12">
                   <div class="probootstrap-flex-block">
                     <div class="probootstrap-text probootstrap-animate " style="width:100%;font-size:18px;">
+                        <h3 style="color:black;">{{ table.name }}</h3>
                         {{ table.content | safe }}
                     </div>
                   </div>
@@ -36,7 +37,7 @@
                 <div class="col-md-12">
                   <div class="probootstrap-flex-block">
                     <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
-                        <h3>{{ chart.chartlabel }}</h3>
+                        <h3 style="color:black;">{{ chart.chartlabel }}</h3>
                         <canvas id="chart{{ forloop.counter0 }}"></canvas>
                     </div>
                   </div>

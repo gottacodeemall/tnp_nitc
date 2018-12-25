@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class ContactUs(models.Model):
-    name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the person.")
+    name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name to be displayed on django admin. Do not create multiple instances.")
     info=models.TextField(blank=False,unique=True,help_text="html content")
     def __str__(self) -> str:
         return '{0}'.format(self.name)

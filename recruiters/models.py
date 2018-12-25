@@ -34,6 +34,7 @@ class PolicyFileUpload(models.Model):
 class StatsTable(models.Model):
     name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the table. Eg. Place Stats 2018")
     content=models.TextField(blank=False,null=False,help_text="HTML content of the table. Make it responsive.")
+    number=models.PositiveIntegerField(blank=False,null=False,help_text="Ordering according to this number.")
     def __str__(self) -> str:
         return '{0}'.format(self.name)
 
@@ -45,7 +46,7 @@ class ChartData(models.Model):
     def __str__(self) -> str:
         return '{0}'.format(self.chartlabel)
 
-class PlacementFileUpload(models.Model):
+class StatisticsFileUpload(models.Model):
     document = models.FileField(upload_to='static/files/statistics/')
     description = models.TextField(blank=False,null=False)
     name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name to be displayed on Django admin.")

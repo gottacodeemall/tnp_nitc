@@ -24,8 +24,9 @@ class LandingStat(models.Model):
         return '{0}'.format(self.labelname)
 
 class FromtheTPO(models.Model):
+    name_django=models.CharField(max_length=255,blank=False,null=False,unique=True,help_text="Name on django-admin")
     message=models.TextField(blank=False,null=False,help_text="Plaintext message")
     pic = models.ImageField(upload_to = 'static/img/', default = 'static/img/slider_3.jpg')
     name = models.CharField(max_length=255,blank=False,null=False,unique=True,help_text="Name of the TPO")
     def __str__(self) -> str:
-        return '{0}'.format(self.name)
+        return '{0}'.format(self.name_django)
