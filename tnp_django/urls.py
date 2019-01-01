@@ -31,3 +31,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+def handler404(request):
+    response = render_to_response('fail.html', {},
+                                  context_instance=RequestContext(request))
+    response.status_code = 404
+    return response

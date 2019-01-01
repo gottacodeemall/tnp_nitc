@@ -19,15 +19,30 @@
             <div class="col-md-12">
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
-                  <ul>
-                    <li> rule1</li>
-                    <li> rule2</li>
-                 </ul>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+                  {{ html|safe }}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+    {% if count != 0 %}
+          <section class="probootstrap-section" style="margin-top:100px;">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="probootstrap-flex-block">
+                    <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
+                      {%  for item in files %}
+                        <a class="btn btn-primary" role="button" href="{{ item.document.url }}" target="_blank">{{ item.file_name }}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    {% endif %}
+
+
 {% endblock %}

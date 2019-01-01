@@ -14,57 +14,52 @@
           </div>
         </div>
       </section>
-            <section class="probootstrap-section">
+    <section class="probootstrap-section">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="probootstrap-flex-block">
                 <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
-                  <h3>Policies</h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis explicabo veniam labore ratione illo vero voluptate a deserunt incidunt odio aliquam commodi blanditiis voluptas error non rerum temporibus optio accusantium!</p>
+                    {{ policy.content | safe }}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+{% if filecount != 0 %}
+    <section class="probootstrap-section" style="margin-top:100px;">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="probootstrap-flex-block">
+                <div class="probootstrap-text probootstrap-animate" style="text-align:center;width:100%;font-size:18px;">
+                    {%  for item in files %}
+                        <a class="btn btn-primary" role="button" href="{{ item.document.url }}" target="_blank">{{ item.file_name }}</a>
+                      {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {%  endif %}
+
       <section class="cd-timeline js-cd-timeline">
 		<div class="cd-timeline__container">
-        			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
-				</div> <!-- cd-timeline__img -->
+            {% for step in proceduresteps %}
+                <div class="cd-timeline__block js-cd-block">
+                    <div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
+                    </div> <!-- cd-timeline__img -->
 
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Step 1</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
-					<a href="#0" class="cd-timeline__read-more">Read more</a>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
+                    <div class="cd-timeline__content js-cd-content">
+                        <h2>Step {{ step.number }}</h2>
+                        {{ step.content | safe }}
+                    </div> <!-- cd-timeline__content -->
+                </div> <!-- cd-timeline__block -->
+            {% endfor %}
 
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--movie js-cd-img">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Step 2</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde?</p>
-					<a href="#0" class="cd-timeline__read-more">Read more</a>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-			<div class="cd-timeline__block js-cd-block">
-				<div class="cd-timeline__img cd-timeline__img--picture js-cd-img">
-				</div> <!-- cd-timeline__img -->
-
-				<div class="cd-timeline__content js-cd-content">
-					<h2>Step 3</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati, quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam provident pariatur temporibus quia eos repellat consequuntur perferendis enim amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.</p>
-					<a href="#0" class="cd-timeline__read-more">Read more</a>
-				</div> <!-- cd-timeline__content -->
-			</div> <!-- cd-timeline__block -->
-
-		
-		</div>
 	</section> <!-- cd-timeline -->
 
 {% endblock %}

@@ -13,65 +13,91 @@
           </div>
         </div>
       </section>
-        
-    <section class="probootstrap-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="probootstrap-flex-block">
-                <div class="probootstrap-text probootstrap-animate " style="width:100%;font-size:18px;">
-                  <h3>Tables and Stats</h3>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-        
+     {% for table in statsdata %}
         <section class="probootstrap-section" style="margin-top:100px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="probootstrap-flex-block">
-                <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
-                    <canvas id="line-chart"></canvas>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="probootstrap-flex-block">
+                    <div class="probootstrap-text probootstrap-animate " style="width:100%;font-size:18px;">
+                        <h3 style="color:black;">{{ table.name }}</h3>
+                        {{ table.content | safe }}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-       <section class="probootstrap-section" style="margin-top:100px;">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="probootstrap-flex-block">
-                <div class="probootstrap-text probootstrap-animate" style="text-align:center;width:100%;font-size:18px;">
-                    <a class="btn btn-primary"> Download Detailed Info</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
+    {% endfor %}
 
+    {% for chart in chartdata %}
+        <section class="probootstrap-section" style="margin-top:100px;">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="probootstrap-flex-block">
+                    <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
+                        <h3 style="color:black;">{{ chart.chartlabel }}</h3>
+                        <canvas id="chart{{ forloop.counter0 }}"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    {% endfor %}
+
+{%  if count != 0 %}
+        <section class="probootstrap-section" style="margin-top:100px;">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="probootstrap-flex-block">
+                    <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
+                      {%  for item in files %}
+                        <a class="btn btn-primary" role="button" href="{{ item.document.url }}" target="_blank">{{ item.file_name }}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+{%  endif %}
 {% endblock %}
 {% block javascript %}
 <script src="{% static 'js/Chart.js' %}"></script>
 <script>
-var ctx = $("#line-chart");
-var lineChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ["2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018"],
-    datasets: [
-      {
-        label: "Avg Package",
-        data: [4,5,6.6,7,8,8.5,10,10,12]
+
+var ctx,lineChart;
+var dynamicColors = function() {
+        var r = Math.floor(Math.random() * 255);
+        var g = Math.floor(Math.random() * 255);
+        var b = Math.floor(Math.random() * 255);
+        return "rgb(" + r + "," + g + "," + b + ")";
+    };
+{%  for chart in chartdata %}
+     ctx = $("#chart{{ forloop.counter0 }}");
+     var lab=JSON.parse('{{ chart.labels | safe }}');
+    var size=Object.keys(lab).length;
+    var colors=[];
+    for(i=0;i<size;i++){
+         colors.push(dynamicColors())
+    }
+     lineChart = new Chart(ctx, {
+      type: '{{ chart.charttype }}',
+      data: {
+        labels: {{ chart.labels | safe }},
+        datasets: [
+          {
+            label: "{{ chart.chartlabel }}",
+            data: {{ chart.data | safe }},
+              backgroundColor: colors
+          }
+        ]
       }
-    ]
-  }
-});
+    });
+{% endfor %}
+
 </script>
 {% endblock %}

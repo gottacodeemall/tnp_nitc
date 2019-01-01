@@ -22,15 +22,9 @@
                 <div class="probootstrap-text probootstrap-animate " style="width:100%;font-size:18px;">
                   <div class="columns">
                     <ul>
-                    <li>Microsoft</li>
-                    <li>GS</li>
-                    <li>Nutanix</li>         
-                   <li>Microsoft</li>
-                    <li>GS</li>
-                    <li>Nutanix</li>
-                    <li>Microsoft</li>
-                    <li>GS</li>
-                    <li>Nutanix</li>
+                    {% for item in comp %}
+                        <li>{{ item.name }}</li>
+                    {% endfor %}
                     </ul>         
                 </div>
                   
