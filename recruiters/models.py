@@ -41,8 +41,8 @@ class StatsTable(models.Model):
 class ChartData(models.Model):
     charttype=models.CharField(max_length=255, blank=False,help_text="Eg. bar ")
     chartlabel=models.CharField(max_length=255, blank=False,unique=True,help_text="Eg. Avg Package")
-    labels=models.TextField(blank=False,null=False,help_text="Enter the labels seperated by commas without spaces after and before comma Eg. (2010,2011,2012) or (cse,ece,eee) or (c s e,e c e,e e e)")
-    data=models.TextField(blank=False,null=False,help_text="Enter the data seperated by commas without spaces after and before comma Eg. (110,111,230)")
+    labels=models.TextField(blank=False,null=False,help_text="Enter the labels seperated by commas without spaces after and before comma Eg. [2010,2011,2012] or ['cse','ece','eee'] ")
+    data=models.TextField(blank=False,null=False,help_text="Enter the data seperated by commas without spaces after and before comma Eg. [110,111,230]")
     def __str__(self) -> str:
         return '{0}'.format(self.chartlabel)
 

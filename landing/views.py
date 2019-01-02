@@ -5,6 +5,7 @@ from .models import Slide,WelcomeMessage,FromtheTPO,LandingStat
 def index(request):
     try:
         slides=Slide.objects.all().order_by('number')
+        slidescount=slides.count()
         welcomemsg=WelcomeMessage.objects.all()
         welcomemsg=welcomemsg[0]
         fromthetpo=FromtheTPO.objects.all()

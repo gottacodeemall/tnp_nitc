@@ -87,6 +87,8 @@ var dynamicColors = function() {
      lineChart = new Chart(ctx, {
       type: '{{ chart.charttype }}',
       data: {
+          scaleBeginAtZero : true,
+          scaleShowGridLines : true,
         labels: {{ chart.labels | safe }},
         datasets: [
           {
