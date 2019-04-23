@@ -48,7 +48,7 @@ def news(request):
             newscount = news.count()
             # ##try to contact server
             # payload = ['Link1','Link2','Link3','Link4','Link5','Link6',]
-            url = 'http://127.0.0.1:9000/api/json/'
+            url = 'tnp-cse.herokuapp.com/api/json/'
             response = requests.post(url, data=json.dumps(payload))
             print(response)
             lis = response.content
