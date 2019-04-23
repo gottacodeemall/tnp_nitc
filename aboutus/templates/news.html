@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block body %}
+{% load static %}       
+      <section class="probootstrap-section probootstrap-section-colored" >
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-left section-heading probootstrap-animate mb0">
+              <h1 class="mb0">News</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="probootstrap-section">
+        <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+                  <div class="probootstrap-text probootstrap-animate">
+                        <table class="table table-borderless">
+                          <tbody>
+                          {% for new in news %}
+                                <tr>
+                                    <td style="font-weight: normal">{{new.short_desc}}</td>
+                                    <td><a class="btn btn-primary" role="button" href="/news/{{ new.name }}" target="_blank">View more</a></td>
+                                </tr>
+                          {% endfor %}
+                          </tbody>
+                        </table>
+                  </div>
+              </div>
+        </div>
+
+            
+
+
+        </div>
+      </section>
+    
+
+{% endblock %}

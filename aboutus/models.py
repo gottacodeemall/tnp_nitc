@@ -40,3 +40,14 @@ class Gallery(models.Model):
     def __str__(self) -> str:
         return '{0}'.format(self.name)
 
+class New(models.Model):
+    name=models.CharField(max_length=255, blank=False,unique=True,help_text="Name of the news. To be displayed on Django admin.")
+    short_desc = models.CharField(max_length=255, blank=False,help_text="Short description about the news.")
+    pic = models.ImageField(upload_to = 'static/img/news/', default = 'static/img/slider_3.jpg')
+    alt_text = models.CharField(max_length=255, blank=False,help_text="If image does not load, this will be displayed.")
+    title= models.TextField(blank=False,null=False,help_text="Title")
+    content = models.TextField(blank=False,null=False,help_text="Insert content.")
+    date = models.DateField(blank=False,null=False,help_text="Date of the event. Sorted based on this.")
+    def __str__(self) -> str:
+        return '{0}'.format(self.name)
+
