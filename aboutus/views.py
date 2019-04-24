@@ -41,23 +41,25 @@ def achievements(request):
 def news(request):
     try:
         news = New.objects.all().order_by('-date')
-        try:
-            payload = []
-            for item in news:
-                payload.append(news.name)
-            newscount = news.count()
-            # ##try to contact server
-            # payload = ['Link1','Link2','Link3','Link4','Link5','Link6',]
-            url = 'tnp-cse.herokuapp.com/api/json/'
-            response = requests.post(url, data=json.dumps(payload))
-            print(response)
-            lis = response.content
-            news_sorted = []
-            for item in lis:
-                news_sorted.append(New.objects.get(name=item))
-            news=news_sorted
-        except:
-            print("error")
+        payload = []
+        for item in news:
+            payload.append(item.name)
+        newscount = news.count()
+        # ##try to contact server
+        #payload = ['highest_package','intra-nit','adobe','oracle']
+        url = 'http://tnp-cse.herokuapp.com/api/json/'
+        response = requests.post(url, data=json.dumps(payload))
+        print(response)
+        lis = response.content
+        lis = json.loads(lis)
+        news_sorted = []
+        for item in lis:
+            try:
+                cur_news =New.objects.get(name=item)
+                news_sorted.append(cur_news)
+            except:
+                print("missed an instance")
+        news=news_sorted
     except:
         return render(request, 'fail.html')
     return render(request, 'news.html',locals())
