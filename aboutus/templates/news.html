@@ -15,13 +15,13 @@
         <div class="container">
         <div class="row">
         <div class="col-md-12">
-                  <div class="probootstrap-text probootstrap-animate">
+                  <div class="probootstrap-text probootstrap-animate" style="width:100%">
                         <table class="table table-borderless">
                           <tbody>
                           {% for new in news %}
                                 <tr>
-                                    <td style="font-weight: normal">{{new.short_desc}}</td>
-                                    <td><a class="btn btn-primary" role="button" href="/news/{{ new.name }}" target="_blank">View more</a></td>
+                                    <td style="font-weight: lighter">{{new.short_desc}}</td>
+                                    <td><a class="btn btn-primary" role="button" href="/news/{{ new.name }}">View more</a></td>
                                 </tr>
                           {% endfor %}
                           </tbody>

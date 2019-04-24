@@ -51,10 +51,12 @@ def news(request):
         response = requests.post(url, data=json.dumps(payload))
         print(response)
         lis = response.content
-        lis = json.loads(lis)
+        lim = json.loads(lis)
+        lim =json.loads(lim)
         news_sorted = []
-        for item in lis:
+        for item in lim:
             try:
+                print(item)
                 cur_news =New.objects.get(name=item)
                 news_sorted.append(cur_news)
             except:
