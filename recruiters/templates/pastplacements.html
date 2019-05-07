@@ -55,7 +55,7 @@
                   <div class="probootstrap-flex-block">
                     <div class="probootstrap-text probootstrap-animate" style="width:100%;font-size:18px;">
                       {%  for item in files %}
-                        <a class="btn btn-primary" role="button" href="{{ item.document.url }}" target="_blank">{{ item.file_name }}</a>
+                        <a class="btn btn-primary" role="button" href="{{ item.document.url }}" target="_blank">{{ item.name }}</a>
                       {% endfor %}
                     </div>
                   </div>
